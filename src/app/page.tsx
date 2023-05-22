@@ -1,7 +1,9 @@
+import Hero from '@/features/landingpage/Hero';
+
 export default function Home() {
     return (
         <main className="pt-content">
-            <h1>Novianto Dev</h1>
+            <Hero />
         </main>
     );
 }
