@@ -16,19 +16,19 @@ const Hero = (props: Props) => {
                         <span className="text-primary">Novianto</span>
                     </h1>
                     <p className="mt-4 text-gray-600 font-medium">
-                        I am a software engineer based in Indonesia. I have
-                        experience in building web applications using NextJS,
-                        TailwindCSS and TypeScript.
+                        I am a Front End Developer based in Yogyakarta,
+                        Indonesia. I have experience in building web
+                        applications using NextJS, TailwindCSS and TypeScript.
                     </p>
                     <div className="flex flex-wrap mt-8 space-x-4">
                         <Button variant="secondary" size="lg">
                             Resume
                         </Button>
-                        <Button variant="ghost" size="lg">
+                        <Button variant="ghost" size="lg" className="group">
                             Project
                             <ArrowUpRight
                                 size={16}
-                                className="text-accent-foreground ml-1"
+                                className="text-accent-foreground ml-1 group-hover:animate-bounce"
                             />
                         </Button>
                     </div>
@@ -83,11 +83,14 @@ const Hero = (props: Props) => {
                 </div>
                 <div className="flex items-center justify-center relative h-full">
                     <div className="w-80 h-80 rounded-full bg-gray-400"></div>
-                    <Badge className="absolute top-20 left-10" size="lg">
+                    <Badge
+                        className="absolute top-20 left-10 animate-bounce duration-[3000ms]"
+                        size="lg"
+                    >
                         Front End
                     </Badge>
                     <Badge
-                        className="absolute bottom-20 right-10"
+                        className="absolute bottom-20 right-10 animate-bounce delay-200 duration-[3000ms]"
                         size="lg"
                         variant="secondary"
                     >
