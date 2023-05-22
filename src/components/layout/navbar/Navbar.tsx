@@ -16,10 +16,10 @@ const Navbar = (props: Props) => {
             <Container className="flex flex-wrap items-center justify-between mx-auto p-4">
                 <Link href="/" className="flex items-center">
                     <Image
-                        src="/logo.png"
-                        className="h-8 aspect-[561/61]"
+                        src="/noviantodev.png"
+                        className="h-4 aspect-[561/61]"
                         alt="NoviantoDev Logo"
-                        width={140}
+                        width={180}
                         height={40}
                         priority
                     />
