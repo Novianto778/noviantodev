@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import './globals.css';
 import localFont from 'next/font/local';
+import Navbar from '../components/layout/navbar/Navbar';
 
 export const metadata: Metadata = {
     title: 'NoviantoDev',
@@ -50,7 +51,10 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <body className={greycliff.className}>{children}</body>
+            <body className={greycliff.className}>
+                <Navbar />
+                {children}
+            </body>
         </html>
     );
 }
