@@ -72,6 +72,9 @@ module.exports = {
             height: {
                 content: 'calc(100vh - 4.5rem)',
             },
+            minHeight: {
+                content: 'calc(100vh - 4.5rem)',
+            },
             padding: {
                 content: '4.5rem',
             },

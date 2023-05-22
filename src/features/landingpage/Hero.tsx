@@ -8,7 +8,7 @@ type Props = {};
 
 const Hero = (props: Props) => {
     return (
-        <div className="h-content pt-8">
+        <div className="min-h-content pt-8">
             <Container className="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
                 <div className="flex flex-col justify-center">
                     <h1 className="text-4xl font-bold text-gray-900 dark:text-white md:text-5xl">
