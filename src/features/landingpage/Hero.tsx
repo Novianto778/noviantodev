@@ -9,8 +9,8 @@ type Props = {};
 
 const Hero = (props: Props) => {
     return (
-        <div className="min-h-content pt-8">
-            <Container className="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+        <div className="min-h-content 2xl:h-hero 2xl:min-h-fit pt-8">
+            <Container className="grid grid-cols-1 md:grid-cols-2 items-center gap-8 h-full">
                 <div className="flex flex-col justify-center">
                     <h1 className="text-4xl font-bold text-gray-900 dark:text-white md:text-5xl">
                         Hi, <br />I am{' '}
@@ -84,25 +84,21 @@ const Hero = (props: Props) => {
                 </div>
                 <div className="flex items-center justify-center relative h-full">
                     <div className="w-80 h-80 rounded-full relative">
-                        <Image
-                            src="/profile.png"
-                            fill
-                            alt="profile picture"
-                        />
+                        <Image src="/profile.png" fill alt="profile picture" />
+                        <Badge
+                            className="absolute top-0 -left-10 animate-bounce duration-[3000ms]"
+                            size="lg"
+                        >
+                            Front End
+                        </Badge>
+                        <Badge
+                            className="absolute bottom-0 -right-10 animate-bounce delay-200 duration-[3000ms]"
+                            size="lg"
+                            variant="secondary"
+                        >
+                            Developer
+                        </Badge>
                     </div>
-                    <Badge
-                        className="absolute top-20 left-10 animate-bounce duration-[3000ms]"
-                        size="lg"
-                    >
-                        Front End
-                    </Badge>
-                    <Badge
-                        className="absolute bottom-20 right-10 animate-bounce delay-200 duration-[3000ms]"
-                        size="lg"
-                        variant="secondary"
-                    >
-                        Developer
-                    </Badge>
                 </div>
             </Container>
         </div>

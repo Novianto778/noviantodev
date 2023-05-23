@@ -53,7 +53,7 @@ const TechSlider = (props: Props) => {
     });
 
     return (
-        <div className="mt-12">
+        <div className="mt-12 2xl:mt-0">
             <Slider {...settings} className="overflow-hidden">
                 {arrayOfTech.map((tech, index) => {
                     return (

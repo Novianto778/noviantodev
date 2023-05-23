@@ -77,6 +77,7 @@ module.exports = {
             },
             height: {
                 content: 'calc(100vh - 4.5rem)',
+                hero: 'calc(100vh - 4.5rem - 4rem)',
             },
             minHeight: {
                 content: 'calc(100vh - 4.5rem)',
