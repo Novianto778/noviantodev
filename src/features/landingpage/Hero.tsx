@@ -86,13 +86,13 @@ const Hero = (props: Props) => {
                     <div className="w-80 h-80 rounded-full relative">
                         <Image src="/profile.png" fill alt="profile picture" />
                         <Badge
-                            className="absolute top-0 -left-10 animate-bounce duration-[3000ms]"
+                            className="absolute top-0 left-0 md:-left-10 animate-bounce duration-[3000ms]"
                             size="lg"
                         >
                             Front End
                         </Badge>
                         <Badge
-                            className="absolute bottom-0 -right-10 animate-bounce delay-200 duration-[3000ms]"
+                            className="absolute bottom-0 right-0 md:-right-10 animate-bounce delay-200 duration-[3000ms]"
                             size="lg"
                             variant="secondary"
                         >
