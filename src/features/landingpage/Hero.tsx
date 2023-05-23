@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowUpRight, Linkedin, Instagram, Github } from 'lucide-react';
 import Link from 'next/link';
 import { Badge } from '@/components/ui/badge';
+import Image from 'next/image';
 
 type Props = {};
 
@@ -82,7 +83,13 @@ const Hero = (props: Props) => {
                     </div>
                 </div>
                 <div className="flex items-center justify-center relative h-full">
-                    <div className="w-80 h-80 rounded-full bg-gray-400"></div>
+                    <div className="w-80 h-80 rounded-full relative">
+                        <Image
+                            src="/profile.png"
+                            fill
+                            alt="profile picture"
+                        />
+                    </div>
                     <Badge
                         className="absolute top-20 left-10 animate-bounce duration-[3000ms]"
                         size="lg"

@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import './globals.css';
 import localFont from 'next/font/local';
+import 'react-18-image-lightbox/style.css';
 import Navbar from '../components/layout/navbar/Navbar';
 
 export const metadata: Metadata = {
@@ -51,7 +52,7 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <body className={greycliff.className}>
+            <body className={`${greycliff.className} font-medium`}>
                 <Navbar />
                 {children}
             </body>

@@ -3,7 +3,8 @@
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
-import programmingTech from '@/data/programming';
+import TECH from '@/data/programming';
+import Image from 'next/image';
 
 type Props = {};
 
@@ -41,21 +42,31 @@ const TechSlider = (props: Props) => {
             },
         ],
     };
+    // const arrayOfTech = Object.values(TECH);
+    // console.log(arrayOfTech);
+    // make arrayOfTech to array of object with key and value
+    const arrayOfTech = Object.keys(TECH).map((key) => {
+        return {
+            name: key,
+            src: TECH[key].src,
+        };
+    });
+
     return (
         <div className="mt-12">
             <Slider {...settings} className="overflow-hidden">
-                {programmingTech.map((tech, index) => {
-                    console.log(tech.icon);
-
+                {arrayOfTech.map((tech, index) => {
                     return (
                         <div
                             key={index}
                             className="flex justify-center items-center"
                         >
-                            <img
-                                src={tech.icon.src}
+                            <Image
+                                src={tech.src}
                                 alt={tech.name}
                                 className="h-12 w-12"
+                                width={48}
+                                height={48}
                             />
                         </div>
                     );

@@ -19,7 +19,7 @@ const Navbar = (props: Props) => {
                         src="/noviantodev.png"
                         className="h-4 aspect-[561/61]"
                         alt="NoviantoDev Logo"
-                        width={180}
+                        width={160}
                         height={40}
                         priority
                     />
