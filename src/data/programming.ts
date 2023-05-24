@@ -42,6 +42,25 @@ const TECH: Tech = {
     ReactTable,
 };
 
+/* 
+    make TECH to object
+    {
+        Typescript: {
+            src: 'https://res.cloudinary.com/dastat880/image/upload/v1624760772/noviantodev/tech/typescript.png',
+        },
+        Reactjs: {
+            src: 'https://res.cloudinary.com/dastat880/image/upload/v1624760772/noviantodev/tech/reactjs.png',
+        },
+    }
+*/
+
+export const arrayOfTech = Object.keys(TECH).map((key) => {
+    return {
+        name: key,
+        src: TECH[key].src,
+    };
+});
+
 // get all key from TECH
 
 export default TECH;

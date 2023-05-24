@@ -1,4 +1,10 @@
-import TECH  from "./programming";
+import { arrayOfTech } from './programming';
+
+const findTech = (tech: string[]) => {
+    return tech.map((t) => {
+        return arrayOfTech.find((item) => item.name === t);
+    });
+};
 
 const PROJECTS = [
     {
@@ -21,7 +27,14 @@ const PROJECTS = [
         github: 'private',
         website: 'https://fti.uajy.ac.id/industri/pl/',
         documentation: '',
-        tech: [TECH.Reactjs, TECH.ReactQuery, TECH.Tailwindcss, TECH.Javascript, TECH.ReactTable, TECH.Zustand],
+        tech: findTech([
+            'Reactjs',
+            'Javascript',
+            'Tailwindcss',
+            'ReactQuery',
+            'Zustand',
+            'ReactTable',
+        ]),
     },
 ];
 

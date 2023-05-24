@@ -3,7 +3,7 @@
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
-import TECH from '@/data/programming';
+import TECH, { arrayOfTech } from '@/data/programming';
 import Image from 'next/image';
 
 type Props = {};
@@ -45,12 +45,6 @@ const TechSlider = (props: Props) => {
     // const arrayOfTech = Object.values(TECH);
     // console.log(arrayOfTech);
     // make arrayOfTech to array of object with key and value
-    const arrayOfTech = Object.keys(TECH).map((key) => {
-        return {
-            name: key,
-            src: TECH[key].src,
-        };
-    });
 
     return (
         <div className="mt-12 2xl:mt-0">
