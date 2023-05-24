@@ -36,6 +36,31 @@ const PROJECTS = [
             'ReactTable',
         ]),
     },
+    {
+        id: 2,
+        name: 'Pamdesku',
+        icon: 'https://res.cloudinary.com/dastat880/image/upload/v1684934037/noviantodev/pamdesku/Logo_Tirto_Kauripan_2_lujwux.png',
+        description: ` Pamdesku is a web-based application that aims to help the people of Gunung Kidul to record and pay water bills and allow
+partners to manage bills and payments. This application has four roles namely admin, manajer, petugas, and pelanggan. This application is has three main features
+namely bill management, payment management, and report management.`,
+        images: [
+            'https://res.cloudinary.com/dastat880/image/upload/v1684934246/noviantodev/pamdesku/Tirto_Kauripan_3_knezph.png',
+            'https://res.cloudinary.com/dastat880/image/upload/v1684934246/noviantodev/pamdesku/Tirto_Kauripan_rr1imw.png',
+            'https://res.cloudinary.com/dastat880/image/upload/v1684934246/noviantodev/pamdesku/Tirto_Kauripan_1_mqgsgz.png',
+            'https://res.cloudinary.com/dastat880/image/upload/v1684934246/noviantodev/pamdesku/Tirto_Kauripan_2_ssrryc.png',
+        ],
+        github: 'private',
+        website: 'https://tirtokauripan.com/',
+        documentation: '',
+        tech: findTech([
+            'Reactjs',
+            'Javascript',
+            'Tailwindcss',
+            'ReactQuery',
+            'Zustand',
+            'ReactTable',
+        ]),
+    },
 ];
 
 export default PROJECTS;

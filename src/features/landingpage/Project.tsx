@@ -41,45 +41,10 @@ const Project = (props: Props) => {
                         </p>
                     </div>
                 </div>
-                <div className="bg-white shadow p-8 border rounded mt-4">
+                <div className="mt-4 flex flex-col gap-8">
                     {PROJECTS.map((project) => (
                         <ProjectCard key={project.id} project={project} />
                     ))}
-                    {/* <div className="flex gap-4 items-center">
-                        <Image
-                            src={LogoUajy}
-                            width={48}
-                            height={48}
-                            alt="logo uajy"
-                        />
-                        <h6 className="text-3xl font-semibold">
-                            {PROJECTS[0].name}
-                        </h6>
-                    </div>
-                    <div className="mt-4">
-                        <p className="font-medium text-lg">
-                            {PROJECTS[0].description}
-                        </p>
-                    </div>
-                    <div className="flex flex-col gap-8 mt-8">
-                        <h6 className="text-3xl font-semibold">Preview</h6>
-                        <div>
-                            <Image
-                                src={PROJECTS[0].images[0]}
-                                width={300}
-                                height={150}
-                                alt="project"
-                            />
-                        </div>
-                        <div>
-                            <Image
-                                src={PROJECTS[0].tech[0].src}
-                                width={64}
-                                height={64}
-                                alt="project"
-                            />
-                        </div>
-                    </div> */}
                 </div>
             </Container>
         </div>

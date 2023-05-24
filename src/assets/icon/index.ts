@@ -15,6 +15,7 @@ import Stars from './stars.svg';
 import Tailwindcss from './tailwindcss.svg';
 import Typescript from './typescript.svg';
 import Zustand from './zustand.svg';
+import Github from './github.svg';
 
 export {
     Typescript,
@@ -34,4 +35,5 @@ export {
     Stars,
     ReactQuery,
     ReactTable,
+    Github,
 };
