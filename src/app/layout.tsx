@@ -3,6 +3,7 @@ import './globals.css';
 import localFont from 'next/font/local';
 import 'react-18-image-lightbox/style.css';
 import Navbar from '../components/layout/navbar/Navbar';
+import ToasterProvider from '../components/layout/Toaster';
 
 export const metadata: Metadata = {
     title: 'NoviantoDev',
@@ -53,6 +54,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={`${greycliff.className} font-medium`}>
+                <ToasterProvider />
                 <Navbar />
                 {children}
             </body>

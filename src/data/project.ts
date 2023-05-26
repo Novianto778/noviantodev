@@ -8,8 +8,37 @@ const findTech = (tech: string[]) => {
 
 const PROJECTS = [
     {
+        id: 3,
+        name: 'CraftConnect',
+        projectType: 'Competition',
+        icon: 'https://res.cloudinary.com/dastat880/image/upload/v1684989509/noviantodev/craftconnect/Frame_nlgyeb.png',
+        description: `Craftconnect is a handicraft e-commerce platform that aims to be a link between MSMEs and customers. Through Craftconnect, customers can easily find products made by MSMEs and buy them online. As an e-commerce platform for MSME handicrafts, CraftConnect has been designed to provide an easy and enjoyable experience for users.
+        CraftConnect has features that can be used by customers such as product filter, product details, product story, and chat with the seller.
+        `,
+        images: [
+            'https://res.cloudinary.com/dastat880/image/upload/v1684989205/noviantodev/craftconnect/Login_kalgt3.png',
+            'https://res.cloudinary.com/dastat880/image/upload/v1684989206/noviantodev/craftconnect/CraftConnect_xixcrx.png',
+            'https://res.cloudinary.com/dastat880/image/upload/v1684989206/noviantodev/craftconnect/Katalog_mnqfsu.png',
+            'https://res.cloudinary.com/dastat880/image/upload/v1684989206/noviantodev/craftconnect/Vintage_chopsticks_zftvup.png',
+            'https://res.cloudinary.com/dastat880/image/upload/v1684989205/noviantodev/craftconnect/Chat_mj2jyg.png',
+            'https://res.cloudinary.com/dastat880/image/upload/v1684989205/noviantodev/craftconnect/shared___Button_-_Primary_Storybook_vz5ju5.png',
+        ],
+        github: 'https://github.com/Novianto778/craftconnect',
+        website: 'https://craftconnect.vercel.app/',
+        documentation: '',
+        tech: findTech([
+            'Nextjs',
+            'Typescript',
+            'Tailwindcss',
+            'Firebase',
+            'Zustand',
+            'Storybook',
+        ]),
+    },
+    {
         id: 1,
         name: 'Professional Learning',
+        projectType: 'Real Project',
         icon: 'https://res.cloudinary.com/dastat880/image/upload/v1684760772/noviantodev/pl/logo_uajy_sosdvc.png',
         description: ` is a website-based application that aims to validate
                             and convert values from professional learning
@@ -39,6 +68,7 @@ const PROJECTS = [
     {
         id: 2,
         name: 'Pamdesku',
+        projectType: 'Real Project',
         icon: 'https://res.cloudinary.com/dastat880/image/upload/v1684934037/noviantodev/pamdesku/Logo_Tirto_Kauripan_2_lujwux.png',
         description: ` Pamdesku is a web-based application that aims to help the people of Gunung Kidul to record and pay water bills and allow
 partners to manage bills and payments. This application has four roles namely admin, manajer, petugas, and pelanggan. This application is has three main features

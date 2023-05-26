@@ -1,5 +1,5 @@
 import Container from '@/components/layout/Container';
-import { Button } from '@/components/ui/button';
+import { Button, buttonVariants } from '@/components/ui/button';
 import { ArrowUpRight, Linkedin, Instagram, Github } from 'lucide-react';
 import Link from 'next/link';
 import { Badge } from '@/components/ui/badge';
@@ -22,9 +22,16 @@ const Hero = (props: Props) => {
                         applications using NextJS, TailwindCSS and TypeScript.
                     </p>
                     <div className="flex flex-wrap mt-8 space-x-4">
-                        <Button variant="secondary" size="lg">
+                        <Link
+                            href="https://drive.google.com/file/d/1OGQcNZF8ADhokYOG2ekD1ZWJKcoSReHp/view?usp=sharing"
+                            target="_blank"
+                            className={buttonVariants({
+                                variant: 'secondary',
+                                size: 'lg',
+                            })}
+                        >
                             Resume
-                        </Button>
+                        </Link>
                         <Button variant="ghost" size="lg" className="group">
                             Project
                             <ArrowUpRight
