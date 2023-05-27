@@ -106,4 +106,20 @@
         -ms-overflow-style: none; /* IE and Edge */
         scrollbar-width: none; /* Firefox */
     }
+
+    /* @animation arrow {
+        0% {
+            transform: translateX(0);
+        }
+        50% {
+            transform: rotate(45deg) translateX(0);
+        }
+        100% {
+            transform: rotate(45deg) translateX(2rem);
+        }
+    }
+
+    .animation-arrow {
+        animation: arrow 0.3s ease-in-out;
+    } */
 }

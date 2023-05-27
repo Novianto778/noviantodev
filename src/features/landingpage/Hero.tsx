@@ -36,7 +36,7 @@ const Hero = (props: Props) => {
                             Project
                             <ArrowUpRight
                                 size={16}
-                                className="text-accent-foreground ml-1 group-hover:animate-bounce"
+                                className="text-accent-foreground ml-1 group-hover:animate-arrow"
                             />
                         </Button>
                     </div>

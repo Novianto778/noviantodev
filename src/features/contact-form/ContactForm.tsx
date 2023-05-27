@@ -15,7 +15,8 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-hot-toast';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, Circle } from 'lucide-react';
+import { useState } from 'react';
 
 const formSchema = z.object({
     name: z.string().min(2, {
@@ -33,6 +34,7 @@ type FormType = z.infer<typeof formSchema>;
 
 const ContactForm = () => {
     // 1. Define your form.
+    const [loading, setLoading] = useState(false);
     const form = useForm<FormType>({
         resolver: zodResolver(formSchema),
         defaultValues: {
@@ -47,6 +49,7 @@ const ContactForm = () => {
         // Do something with the form values.
         // ✅ This will be type-safe and validated.
         try {
+            setLoading(true);
             await fetch('/api/contact', {
                 method: 'POST',
                 headers: {
@@ -57,6 +60,7 @@ const ContactForm = () => {
         } catch (error) {
             console.error('Failed to send email:', error);
         } finally {
+            setLoading(false);
             toast.success('Message sent! Thank you for contacting me.', {
                 duration: 3000,
                 position: 'bottom-right',
@@ -124,12 +128,17 @@ const ContactForm = () => {
                         )}
                     />
                     <Button
+                        loading={loading}
+                        loadingText="Sending..."
                         type="submit"
                         variant="black"
-                        className="w-60 flex items-center gap-1"
+                        className="w-60 flex items-center gap-1 group"
                     >
                         Submit
-                        <ArrowUpRight size={20} className="inline-block" />
+                        <ArrowUpRight
+                            size={20}
+                            className="inline-block group-hover:animate-arrow"
+                        />
                     </Button>
                 </form>
             </Form>
