@@ -1,3 +1,4 @@
+import { Project } from '../types/project.type';
 import { arrayOfTech } from './programming';
 
 const findTech = (tech: string[]) => {
@@ -6,7 +7,7 @@ const findTech = (tech: string[]) => {
     });
 };
 
-const PROJECTS = [
+const PROJECTS: Project[] = [
     {
         id: 3,
         name: 'CraftConnect',

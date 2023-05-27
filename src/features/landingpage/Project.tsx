@@ -1,11 +1,10 @@
 import { Stars } from '@/assets/icon';
-import Image from 'next/image';
 import Container from '@/components/layout/Container';
-import Link from 'next/link';
 import { buttonVariants } from '@/components/ui/button';
-import { cn } from '@/lib/utils';
-import { LogoUajy } from '@/assets/images';
 import PROJECTS from '@/data/project';
+import { cn } from '@/lib/utils';
+import Image from 'next/image';
+import Link from 'next/link';
 import ProjectCard from '../project/ProjectCard';
 
 type Props = {};
