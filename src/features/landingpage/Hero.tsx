@@ -94,6 +94,7 @@ const Hero = (props: Props) => {
                         <Image
                             src="/profile.png"
                             fill
+                            priority
                             alt="profile picture"
                             sizes="(max-width: 640px) 100vw, 640px"
                         />

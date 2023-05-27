@@ -7,7 +7,7 @@ type Props = {};
 
 const Contact = (props: Props) => {
     return (
-        <section className="mt-16">
+        <section className="mt-16" id="contact">
             <Container className="max-w-5xl">
                 <h2 className="text-4xl font-semibold">
                     Love to hear from you,

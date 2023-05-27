@@ -11,7 +11,7 @@ type Props = {};
 
 const Project = (props: Props) => {
     return (
-        <div className="mt-12">
+        <div className="mt-12" id="project">
             <Container>
                 <div className="flex items-center gap-4">
                     <Image
