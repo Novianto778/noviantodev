@@ -1,11 +1,11 @@
 import Link from 'next/link';
 import React from 'react';
-import { ProjectType } from '@/types/project.type';
+import { Project } from '@/types/project.type';
 import { getMainDomain } from '@/lib/utils';
 import { ArrowUpRight } from 'lucide-react';
 
 type Props = {
-    project: ProjectType;
+    project: Project;
 };
 
 const ProjectLink = ({ project }: Props) => {

@@ -91,7 +91,12 @@ const Hero = (props: Props) => {
                 </div>
                 <div className="flex items-center justify-center relative h-full">
                     <div className="w-80 h-80 rounded-full relative">
-                        <Image src="/profile.png" fill alt="profile picture" />
+                        <Image
+                            src="/profile.png"
+                            fill
+                            alt="profile picture"
+                            sizes="(max-width: 640px) 100vw, 640px"
+                        />
                         <Badge
                             className="absolute top-0 left-0 md:-left-10 animate-bounce duration-[3000ms]"
                             size="lg"

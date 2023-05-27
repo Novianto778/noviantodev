@@ -1,11 +1,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import { ProjectType } from '@/types/project.type';
+import { Project } from '@/types/project.type';
 import { Github } from '@/assets/icon';
 
 type Props = {
-    project: ProjectType;
+    project: Project;
 };
 
 const ProjectSource = ({ project }: Props) => {

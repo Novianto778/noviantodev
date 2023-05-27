@@ -30,6 +30,7 @@ const ProjectImagePreview = ({ images }: Props) => {
                         <Image
                             src={image}
                             fill
+                            sizes="(max-width: 640px) 100vw, 640px"
                             alt="project"
                             className="border border-primary bg-cover object-cover rounded cursor-pointer w-full"
                             onClick={() => {

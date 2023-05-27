@@ -4,10 +4,10 @@ import {
     HoverCardTrigger,
 } from '@/components/ui/hovercard';
 import Image from 'next/image';
-import { ProjectType } from '@/types/project.type';
+import { Project } from '@/types/project.type';
 
 type Props = {
-    project: ProjectType;
+    project: Project;
 };
 
 const ProjectTech = ({ project }: Props) => {

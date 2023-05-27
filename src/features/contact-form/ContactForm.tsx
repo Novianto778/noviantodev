@@ -50,22 +50,34 @@ const ContactForm = () => {
         // ✅ This will be type-safe and validated.
         try {
             setLoading(true);
-            await fetch('/api/contact', {
+            const res = await fetch('/api/contact', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify(values),
             });
-        } catch (error) {
+
+            console.log(res);
+
+            if (res.ok) {
+                toast.success('Message sent! Thank you for contacting me.', {
+                    duration: 3000,
+                    position: 'bottom-right',
+                });
+                form.reset();
+            }
+            if (!res.ok) {
+                throw new Error('Too many requests. Try again next hour.');
+            }
+        } catch (error: any) {
             console.error('Failed to send email:', error);
-        } finally {
-            setLoading(false);
-            toast.success('Message sent! Thank you for contacting me.', {
+            toast.error(error?.message as string, {
                 duration: 3000,
                 position: 'bottom-right',
             });
-            form.reset();
+        } finally {
+            setLoading(false);
         }
     }
 

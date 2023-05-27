@@ -1,29 +1,29 @@
+import { Project } from '@/types/project.type';
 import Image from 'next/image';
-import { ProjectType } from '@/types/project.type';
 import ProjectImagePreview from './ProjectImagePreview';
-
-import { ArrowUpRight } from 'lucide-react';
-import Link from 'next/link';
-import { getMainDomain } from '../../lib/utils';
-import ProjectTech from './ProjectTech';
-import ProjectSource from './ProjectSource';
 import ProjectLink from './ProjectLink';
+import ProjectSource from './ProjectSource';
+import ProjectTech from './ProjectTech';
+import ProjectTypeBadge from './ProjectTypeBadge';
 
 type Props = {
-    project: ProjectType;
+    project: Project;
 };
 
 const ProjectCard = ({ project }: Props) => {
     return (
         <div className="flex flex-col gap-4 bg-white shadow p-8 border rounded ">
-            <div className="flex gap-4 items-center">
-                <Image
-                    src={project.icon}
-                    width={48}
-                    height={48}
-                    alt="logo uajy"
-                />
-                <h6 className="text-3xl font-semibold">{project.name}</h6>
+            <div className="flex justify-between items-center">
+                <div className="flex gap-4 items-center">
+                    <Image
+                        src={project.icon}
+                        width={48}
+                        height={48}
+                        alt="logo uajy"
+                    />
+                    <h6 className="text-3xl font-semibold">{project.name}</h6>
+                </div>
+                <ProjectTypeBadge type={project.projectType} />
             </div>
             <p className="font-medium text-lg">{project.description}</p>
             <div className="flex flex-col gap-8">
