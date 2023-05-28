@@ -1,9 +1,9 @@
 import Container from '@/components/layout/Container';
-import { Button, buttonVariants } from '@/components/ui/button';
-import { ArrowUpRight, Linkedin, Instagram, Github } from 'lucide-react';
-import Link from 'next/link';
 import { Badge } from '@/components/ui/badge';
+import { buttonVariants } from '@/components/ui/button';
+import { ArrowUpRight, Github, Instagram, Linkedin } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 type Props = {};
 
@@ -32,13 +32,20 @@ const Hero = (props: Props) => {
                         >
                             Resume
                         </Link>
-                        <Button variant="ghost" size="lg" className="group">
+                        <Link
+                            href="/project"
+                            className={buttonVariants({
+                                variant: 'ghost',
+                                size: 'lg',
+                                className: 'group',
+                            })}
+                        >
                             Project
                             <ArrowUpRight
                                 size={16}
                                 className="text-accent-foreground ml-1 group-hover:animate-arrow"
                             />
-                        </Button>
+                        </Link>
                     </div>
                     <div className="flex mt-8 gap-6">
                         <div className="flex flex-col gap-6">

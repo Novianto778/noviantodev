@@ -28,7 +28,7 @@ const Project = (props: Props) => {
                             Here are some of my projects that I have worked on
                             recently. Want to{' '}
                             <Link
-                                href="/projects"
+                                href="/project"
                                 className={cn(
                                     buttonVariants({ variant: 'link' }),
                                     'px-0'
