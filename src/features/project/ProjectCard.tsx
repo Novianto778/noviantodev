@@ -13,7 +13,7 @@ type Props = {
 const ProjectCard = ({ project }: Props) => {
     return (
         <div className="flex flex-col gap-4 bg-white shadow p-8 border rounded ">
-            <div className="flex justify-between items-center">
+            <div className="flex flex-col md:flex-row justify-between items-center">
                 <div className="flex gap-4 items-center">
                     <Image
                         src={project.icon}
