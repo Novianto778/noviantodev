@@ -23,7 +23,7 @@ const Hero = (props: Props) => {
                     </p>
                     <div className="flex flex-wrap mt-8 space-x-4">
                         <Link
-                            href="https://drive.google.com/file/d/1OGQcNZF8ADhokYOG2ekD1ZWJKcoSReHp/view?usp=sharing"
+                            href="https://drive.google.com/file/d/1XK_XjGVDPksmNnGiXTqmdtbdZbDDR2X6/view?usp=share_link"
                             target="_blank"
                             className={buttonVariants({
                                 variant: 'secondary',

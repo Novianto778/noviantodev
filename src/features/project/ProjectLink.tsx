@@ -18,9 +18,9 @@ const ProjectLink = ({ project }: Props) => {
             <Link
                 href={project.website}
                 target="_blank"
-                className="flex items-center mt-2 w-max relative group before:content-[''] before:w-0 before:h-0.5 before:bg-primary hover:before:w-full before:absolute before:-bottom-2 before:duration-300"
+                className="flex max-w-full items-center mt-2 w-max relative group before:content-[''] before:w-0 before:h-0.5 before:bg-primary hover:before:w-full before:absolute before:-bottom-2 before:duration-300"
             >
-                <h6 className="text-4xl font-semibold">
+                <h6 className="text-2xl md:text-4xl font-semibold max-w-full break-words">
                     {getMainDomain(project.website)}
                 </h6>
                 <ArrowUpRight className="group-hover:animate-bounce" />
