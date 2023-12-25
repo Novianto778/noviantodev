@@ -1,3 +1,4 @@
+import Bootstrap from './bootstrap.svg';
 import Express from './express.svg';
 import Figma from './figma.svg';
 import Firebase from './firebase.svg';
@@ -11,7 +12,9 @@ import Prisma from './prisma.svg';
 import ReactQuery from './react-query.svg';
 import ReactTable from './react-table.svg';
 import Reactjs from './reactjs.svg';
+import Redux from './redux.svg';
 import Sanity from './sanity.svg';
+import Scss from './scss.svg';
 import Stars from './stars.svg';
 import Storybook from './storybook.svg';
 import Tailwindcss from './tailwindcss.svg';
@@ -20,24 +23,27 @@ import WavingHand from './wavinghand.svg';
 import Zustand from './zustand.svg';
 
 export {
-    Typescript,
-    Reactjs,
+    Bootstrap,
     Express,
     Figma,
     Firebase,
+    Github,
     Javascript,
     Mongodb,
     Mysql,
     Nextjs,
     Postgresql,
     Prisma,
-    Sanity,
-    Tailwindcss,
-    Zustand,
-    Stars,
     ReactQuery,
     ReactTable,
-    Github,
+    Reactjs,
+    Redux,
+    Sanity,
+    Scss,
+    Stars,
     Storybook,
+    Tailwindcss,
+    Typescript,
     WavingHand,
+    Zustand,
 };

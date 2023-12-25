@@ -1,4 +1,5 @@
 import {
+    Bootstrap,
     Express,
     Figma,
     Firebase,
@@ -11,7 +12,9 @@ import {
     ReactQuery,
     ReactTable,
     Reactjs,
+    Redux,
     Sanity,
+    Scss,
     Storybook,
     Tailwindcss,
     Typescript,
@@ -42,6 +45,9 @@ const TECH: Tech = {
     Zustand,
     ReactTable,
     Storybook,
+    Bootstrap,
+    Scss,
+    Redux,
 };
 
 export const arrayOfTech = Object.keys(TECH).map((key) => {

@@ -1,5 +1,6 @@
 export type ProjectType =
-    | 'Real Project'
+    | 'Freelance'
+    | 'Internship'
     | 'Personal Project'
     | 'Competition'
     | 'College Project'
@@ -8,6 +9,7 @@ export type ProjectType =
 export type Project = {
     id: number;
     name: string;
+    subtitle: string;
     projectType: ProjectType;
     icon: string;
     description: string;

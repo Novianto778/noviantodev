@@ -1,12 +1,10 @@
-import { NextRequest, NextResponse } from 'next/server';
-
 import { render } from '@react-email/components';
 
 import { transporter, smtpEmail } from '@/lib/nodemailer';
 
 import { Email } from '@/components/ui/email';
 
-export async function POST(req: NextRequest, res: NextResponse) {
+export async function POST(req: Request, res: Response) {
     const body = await req.json();
     const { name, email, message } = body;
 

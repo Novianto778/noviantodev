@@ -9,37 +9,32 @@ const findTech = (tech: string[]) => {
 
 const PROJECTS: Project[] = [
     {
-        id: 3,
-        name: 'CraftConnect',
-        projectType: 'Competition',
-        icon: 'https://res.cloudinary.com/dastat880/image/upload/v1684989509/noviantodev/craftconnect/Frame_nlgyeb.png',
-        description: `Craftconnect is a handicraft e-commerce platform that aims to be a link between MSMEs and customers. Through Craftconnect, customers can easily find products made by MSMEs and buy them online. As an e-commerce platform for MSME handicrafts, CraftConnect has been designed to provide an easy and enjoyable experience for users.
-        CraftConnect has features that can be used by customers such as product filter, product details, product story, and chat with the seller.
+        id: 4,
+        name: 'Ideabox Multitenant',
+        subtitle: 'MSIB Internship - PT. Telkom Indonesia',
+        projectType: 'Internship',
+        icon: 'https://res.cloudinary.com/dastat880/image/upload/v1703496094/icon-ideabox_1_ywblnm.png',
+        description: `Ideabox Multitenant is a Crowdsourcing Idea Platform designed to develop an Innovation Ecosystem and foster an Innovation Culture through the submission and collaboration of innovative ideas. This enhanced version supports multiple tenants or users, providing improved scalability and performance.
         `,
         images: [
-            'https://res.cloudinary.com/dastat880/image/upload/v1684989205/noviantodev/craftconnect/Login_kalgt3.png',
-            'https://res.cloudinary.com/dastat880/image/upload/v1684989206/noviantodev/craftconnect/CraftConnect_xixcrx.png',
-            'https://res.cloudinary.com/dastat880/image/upload/v1684989206/noviantodev/craftconnect/Katalog_mnqfsu.png',
-            'https://res.cloudinary.com/dastat880/image/upload/v1684989206/noviantodev/craftconnect/Vintage_chopsticks_zftvup.png',
-            'https://res.cloudinary.com/dastat880/image/upload/v1684989205/noviantodev/craftconnect/Chat_mj2jyg.png',
-            'https://res.cloudinary.com/dastat880/image/upload/v1684989205/noviantodev/craftconnect/shared___Button_-_Primary_Storybook_vz5ju5.png',
+            'https://res.cloudinary.com/dastat880/image/upload/v1703495574/homepage_nqj23y.png',
+            'https://res.cloudinary.com/dastat880/image/upload/v1703495574/dashboard_hzum7j.png',
+            'https://res.cloudinary.com/dastat880/image/upload/v1703495573/idea-management_wiliey.png',
+            'https://res.cloudinary.com/dastat880/image/upload/v1703495573/create-idea_werkge.png',
+            'https://res.cloudinary.com/dastat880/image/upload/v1703495574/event_pewq1f.png',
         ],
-        github: 'https://github.com/Novianto778/craftconnect',
-        website: 'https://craftconnect.vercel.app/',
+        github: 'private',
+        website: 'https://ideaboxapp.com/',
         documentation: '',
-        tech: findTech([
-            'Nextjs',
-            'Typescript',
-            'Tailwindcss',
-            'Firebase',
-            'Zustand',
-            'Storybook',
-        ]),
+        tech: findTech(['Nextjs', 'Bootstrap', 'Redux', 'Scss']),
     },
+
     {
         id: 1,
         name: 'Professional Learning',
-        projectType: 'Real Project',
+        projectType: 'Internship',
+        subtitle: 'Freelance Project - Universitas Atma Jaya Yogyakarta',
+
         icon: 'https://res.cloudinary.com/dastat880/image/upload/v1684760772/noviantodev/pl/logo_uajy_sosdvc.png',
         description: ` is a website-based application that aims to validate
                             and convert values from professional learning
@@ -69,7 +64,8 @@ const PROJECTS: Project[] = [
     {
         id: 2,
         name: 'Pamdesku',
-        projectType: 'Real Project',
+        subtitle: 'Freelance Project - Universitas Atma Jaya Yogyakarta',
+        projectType: 'Freelance',
         icon: 'https://res.cloudinary.com/dastat880/image/upload/v1684934037/noviantodev/pamdesku/Logo_Tirto_Kauripan_2_lujwux.png',
         description: ` Pamdesku is a web-based application that aims to help the people of Gunung Kidul to record and pay water bills and allow
 partners to manage bills and payments. This application has four roles namely admin, manajer, petugas, and pelanggan. This application is has three main features
@@ -90,6 +86,35 @@ namely bill management, payment management, and report management.`,
             'ReactQuery',
             'Zustand',
             'ReactTable',
+        ]),
+    },
+    {
+        id: 3,
+        name: 'CraftConnect',
+        subtitle: 'Competition Project - Universitas Atma Jaya Yogyakarta',
+        projectType: 'Competition',
+        icon: 'https://res.cloudinary.com/dastat880/image/upload/v1684989509/noviantodev/craftconnect/Frame_nlgyeb.png',
+        description: `Craftconnect is a handicraft e-commerce platform that aims to be a link between MSMEs and customers. Through Craftconnect, customers can easily find products made by MSMEs and buy them online. As an e-commerce platform for MSME handicrafts, CraftConnect has been designed to provide an easy and enjoyable experience for users.
+        CraftConnect has features that can be used by customers such as product filter, product details, product story, and chat with the seller.
+        `,
+        images: [
+            'https://res.cloudinary.com/dastat880/image/upload/v1684989205/noviantodev/craftconnect/Login_kalgt3.png',
+            'https://res.cloudinary.com/dastat880/image/upload/v1684989206/noviantodev/craftconnect/CraftConnect_xixcrx.png',
+            'https://res.cloudinary.com/dastat880/image/upload/v1684989206/noviantodev/craftconnect/Katalog_mnqfsu.png',
+            'https://res.cloudinary.com/dastat880/image/upload/v1684989206/noviantodev/craftconnect/Vintage_chopsticks_zftvup.png',
+            'https://res.cloudinary.com/dastat880/image/upload/v1684989205/noviantodev/craftconnect/Chat_mj2jyg.png',
+            'https://res.cloudinary.com/dastat880/image/upload/v1684989205/noviantodev/craftconnect/shared___Button_-_Primary_Storybook_vz5ju5.png',
+        ],
+        github: 'https://github.com/Novianto778/craftconnect',
+        website: 'https://craftconnect.vercel.app/',
+        documentation: '',
+        tech: findTech([
+            'Nextjs',
+            'Typescript',
+            'Tailwindcss',
+            'Firebase',
+            'Zustand',
+            'Storybook',
         ]),
     },
 ];

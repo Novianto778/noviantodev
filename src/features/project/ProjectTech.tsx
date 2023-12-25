@@ -16,7 +16,7 @@ const ProjectTech = ({ project }: Props) => {
             {project.tech.map((tech, index) => {
                 return (
                     <HoverCard key={index} openDelay={300}>
-                        <HoverCardTrigger>
+                        <HoverCardTrigger className="flex items-center">
                             <Image
                                 src={tech?.src!}
                                 width={64}

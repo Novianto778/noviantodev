@@ -13,17 +13,22 @@ type Props = {
 const ProjectCard = ({ project }: Props) => {
     return (
         <div className="flex flex-col gap-4 bg-white shadow p-8 border rounded ">
-            <div className="flex flex-col md:flex-row justify-between items-center">
-                <div className="flex gap-4 items-center">
-                    <Image
-                        src={project.icon}
-                        width={48}
-                        height={48}
-                        alt="logo uajy"
-                    />
-                    <h6 className="text-3xl font-semibold">{project.name}</h6>
+            <div className="flex flex-col gap-2">
+                <div className="flex flex-col md:flex-row justify-between items-center">
+                    <div className="flex gap-4 items-center">
+                        <Image
+                            src={project.icon}
+                            width={48}
+                            height={48}
+                            alt="logo uajy"
+                        />
+                        <h6 className="text-3xl font-semibold">
+                            {project.name}
+                        </h6>
+                    </div>
+                    <ProjectTypeBadge type={project.projectType} />
                 </div>
-                <ProjectTypeBadge type={project.projectType} />
+                <p className="font-semibold text-lg">{project.subtitle}</p>
             </div>
             <p className="font-medium text-lg">{project.description}</p>
             <div className="flex flex-col gap-8">

@@ -6,7 +6,8 @@ const badge = cva('', {
     variants: {
         type: {
             'Personal Project': 'bg-primary text-primary-foreground',
-            'Real Project': 'bg-secondary text-secondary-foreground',
+            Freelance: 'bg-secondary text-secondary-foreground',
+            Internship: 'bg-green-500 text-white',
             Competition: 'bg-yellow-500 text-white',
             'College Project': 'bg-black text-white',
             Other: 'bg-gray-500 text-gray-100',
