@@ -10,12 +10,12 @@ import { InstagramEmbed } from '../../types/project.type';
 
 const getInstagramPosts = async () => {
     const url =
-        'https://instagram-scraper-20231.p.rapidapi.com/userposts/50122931546/12/%7Bend_cursor%7D';
+        'https://instagram-scraper-20231.p.rapidapi.com/userposts/50122931546/3/%7Bend_cursor%7D';
     const options = {
         method: 'GET',
         headers: {
             'X-RapidAPI-Key':
-                '416894d6femshd5a5a3e5e8248e9p110ef4jsnc5ae99f570c8',
+                '3ea13eb795mshdc23ce6925fc8e1p160395jsnf9a5f09e29e1',
             'X-RapidAPI-Host': 'instagram-scraper-20231.p.rapidapi.com',
         },
     };
@@ -69,7 +69,7 @@ const Microblog = async () => {
                         </p>
                     </div>
                 </div>
-                <div className="mt-4 grid grid-cols-3 gap-8">
+                <div className="mt-4 grid grid-cols-1 md:grid-cols-3 gap-8">
                     {posts?.status !== 'success' ? (
                         <div className="col-span-3">
                             <p>Something went wrong</p>

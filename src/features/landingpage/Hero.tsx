@@ -59,7 +59,7 @@ const Hero = (props: Props) => {
                             </div>
                             <div className="flex flex-col">
                                 <h2 className="text-2xl font-bold text-gray-900 md:text-3xl">
-                                    2
+                                    4
                                 </h2>
                                 <p className="text-gray-600 font-medium">
                                     Real Projects
