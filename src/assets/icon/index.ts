@@ -1,3 +1,4 @@
+import Blog from './blog.svg';
 import Bootstrap from './bootstrap.svg';
 import Express from './express.svg';
 import Figma from './figma.svg';
@@ -23,6 +24,7 @@ import WavingHand from './wavinghand.svg';
 import Zustand from './zustand.svg';
 
 export {
+    Blog,
     Bootstrap,
     Express,
     Figma,
