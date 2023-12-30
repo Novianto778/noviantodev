@@ -1,4 +1,3 @@
-'use client';
 import Image from 'next/image';
 import Container from '@/components/layout/Container';
 import { Blog } from '../../assets/icon';
