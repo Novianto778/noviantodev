@@ -12,7 +12,7 @@ const useRecaptcha = (key?: string) => {
         return;
       }
 
-      const token = await executeRecaptcha(key || new Date().toISOString());
+      const token = await executeRecaptcha(key || "recaptcha-action");
 
       console.log("token:", token);
 
