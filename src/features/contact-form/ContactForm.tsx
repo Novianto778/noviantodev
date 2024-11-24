@@ -19,6 +19,7 @@ import { ArrowUpRight, Circle } from "lucide-react";
 import { useState } from "react";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import useRecaptcha from "@/hooks/useRecaptcha";
+import RecaptchaWrapper from "@/components/layout/RecaptchaWrapper";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -55,7 +56,7 @@ const ContactForm = () => {
     try {
       setLoading(true);
 
-      await execute();
+      // await execute();
 
       const res = await fetch("/api/contact", {
         method: "POST",
@@ -92,64 +93,66 @@ const ContactForm = () => {
     <div className="mt-8">
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-          <div className="flex flex-col md:flex-row gap-8 w-full">
+          <RecaptchaWrapper>
+            <div className="flex flex-col md:flex-row gap-8 w-full">
+              <FormField
+                control={form.control}
+                name="name"
+                render={({ field }) => (
+                  <FormItem className="w-full">
+                    <FormLabel>Name</FormLabel>
+                    <FormControl>
+                      <Input placeholder="John Doe" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="email"
+                render={({ field }) => (
+                  <FormItem className="w-full">
+                    <FormLabel>Email</FormLabel>
+                    <FormControl>
+                      <Input placeholder="your@email.com" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </div>
             <FormField
               control={form.control}
-              name="name"
+              name="message"
               render={({ field }) => (
                 <FormItem className="w-full">
-                  <FormLabel>Name</FormLabel>
+                  <FormLabel>Message</FormLabel>
                   <FormControl>
-                    <Input placeholder="John Doe" {...field} />
+                    <Textarea
+                      rows={6}
+                      placeholder="Your message here..."
+                      {...field}
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
             />
-            <FormField
-              control={form.control}
-              name="email"
-              render={({ field }) => (
-                <FormItem className="w-full">
-                  <FormLabel>Email</FormLabel>
-                  <FormControl>
-                    <Input placeholder="your@email.com" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-          </div>
-          <FormField
-            control={form.control}
-            name="message"
-            render={({ field }) => (
-              <FormItem className="w-full">
-                <FormLabel>Message</FormLabel>
-                <FormControl>
-                  <Textarea
-                    rows={6}
-                    placeholder="Your message here..."
-                    {...field}
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <Button
-            loading={loading}
-            loadingText="Sending..."
-            type="submit"
-            variant="black"
-            className="w-60 flex items-center gap-1 group"
-          >
-            Submit
-            <ArrowUpRight
-              size={20}
-              className="inline-block group-hover:animate-arrow"
-            />
-          </Button>
+            <Button
+              loading={loading}
+              loadingText="Sending..."
+              type="submit"
+              variant="black"
+              className="w-60 flex items-center gap-1 group"
+            >
+              Submit
+              <ArrowUpRight
+                size={20}
+                className="inline-block group-hover:animate-arrow"
+              />
+            </Button>
+          </RecaptchaWrapper>
         </form>
       </Form>
     </div>

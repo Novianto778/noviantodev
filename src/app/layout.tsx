@@ -54,14 +54,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <RecapthaProvider>
-      <html lang="en">
-        <body className={`${greycliff.className} font-medium`}>
-          <ToasterProvider />
-          <Navbar />
-          {children}
-        </body>
-      </html>
-    </RecapthaProvider>
+    // <RecapthaProvider>
+    <html lang="en">
+      <body className={`${greycliff.className} font-medium`}>
+        <ToasterProvider />
+        <Navbar />
+        {children}
+      </body>
+    </html>
+    // </RecapthaProvider>
   );
 }

@@ -23,7 +23,7 @@ export async function POST(req: Request, res: Response) {
     // verify connection configuration
     transporter.verify(function (error, success) {
       if (error) {
-        console.log(error);
+        console.log("err", error);
         reject(error);
       } else {
         console.log("Server is ready to take our messages");
@@ -34,19 +34,11 @@ export async function POST(req: Request, res: Response) {
 
   try {
     // Send email using the transporter
-    await new Promise((resolve, reject) => {
-      transporter.sendMail(options, (error, info) => {
-        if (error) {
-          console.error("Failed to send email:", error);
-          reject(error);
-        }
-        console.log("Email sent: " + info.response);
-        resolve(info);
-      });
-    });
+    await transporter.sendMail(options);
   } catch (error) {
-    console.error("Failed to send email:", error);
-    return new Response(JSON.stringify({ error: error }));
+    console.error(error);
+    return new Response("Error sending email", { status: 500 });
   }
+
   return new Response("OK");
 }
